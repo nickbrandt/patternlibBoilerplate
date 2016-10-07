@@ -1,0 +1,63 @@
+////////////////////////////////
+// typography
+////////////////////////////////
+
+body {
+	font-family: 'Lato', helvetica, arial, sans-serif;
+	padding: 140px 0;
+	color: $gray-med;
+	font-size: $base-font-size;
+}
+
+p {
+	line-height: $line-height;
+	margin: rem-calc(0 0 15 0);
+
+	&.lead {
+		font-size: rem-calc(21);
+	}
+}
+
+// headings
+h1, h2, h3, h4, h5, h6 {
+	line-height: $line-height;
+}
+
+
+h1 {
+	font-size: rem-calc(38);
+	color: $primary;
+	font-weight: 300;
+}
+
+h2 {
+	font-size: rem-calc(30);
+	font-weight: 300;
+	margin: rem-calc(10 0 15);
+}
+
+section > h2 {
+	border-top: 1px solid #ddd;
+	border-bottom: 1px solid #ddd;
+	padding: 15px 0;
+	margin-bottom: rem-calc(50);
+}
+
+h3 {
+	font-size: rem-calc(23);
+	color: $gray;
+	margin: rem-calc(5 0 10);
+}
+
+h4 {
+	font-size: rem-calc(16);
+	margin: rem-calc(10 0 10);
+	color: $primary;
+}
+
+h5 {
+	color: $gray-dk;
+	font-weight: 800;
+	font-size: rem-calc(15);
+	margin: rem-calc(5 0 5 0);
+}
