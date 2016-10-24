@@ -1,0 +1,103 @@
+// forms
+label {
+	font-size: rem-calc(14);
+	letter-spacing: .03em;
+	display: block;
+	font-weight: 600;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+input[type="text"], input[type="password"], input[type="date"], input[type="datetime"], input[type="datetime-local"], input[type="month"], input[type="week"], input[type="email"], input[type="number"], input[type="search"], input[type="tel"], input[type="time"], input[type="url"], textarea, select {
+	height: rem-calc(38);
+	line-height: rem-calc(38);
+	padding: rem-calc(0 13);
+	border: 1px solid shade($gray-lt, 10%);
+	min-width: 300px;
+	background: white;
+	border-radius: 2px;
+	transition: .3s all ease;
+	font-size: rem-calc(15);
+
+	&:focus {
+		outline: none;
+		box-shadow: 0 0 3px rgba($primary, 1);
+		border: 1px solid $primary;
+		// box-shadow: inset 0 -3px 0 $primary;
+		color: $gray-dk;
+	}
+}
+
+textarea {
+	height: auto;
+}
+
+.form-item {
+	margin-top: rem-calc(8);
+}
+
+input[type="radio"] {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+
+	+ label {
+		text-transform: none;
+		letter-spacing: 0;
+		display: inline-block;
+		font-size: rem-calc(15);
+		font-weight: 400;
+		position: relative;
+		padding-left: rem-calc(34);
+
+		&:before,
+		&:after {
+			content: '';
+			display: block;
+			position: absolute;
+			width: 24px;
+			height: 24px;
+			left: 0;
+			top: 0;
+		}
+
+		&:before {
+			border: 2px solid $gray;
+			border-radius: 50%;
+		}
+
+		&:after {
+			width: rem-calc(12);
+			height: rem-calc(12);
+			border-radius: 50%;
+			left: rem-calc(6);
+			top: rem-calc(6);
+			background: $primary;
+			opacity: 0;
+		}
+	}
+
+	&:checked + label {
+		&:before {
+			border-color: $primary;
+		}
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

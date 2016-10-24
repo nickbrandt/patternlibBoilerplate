@@ -1,0 +1,35 @@
+.alert {
+	padding: rem-calc(10 13);
+	margin-bottom: rem-calc(20);
+	border: 1px solid shade($gray-lt, 10%);
+	background: tint($gray-lt, 2%);
+	border-radius: 2px;
+	font-size: rem-calc(14);
+
+	&.info {
+		background: tint($info, 90%);
+		border-color: tint($info, 50%);
+		color: shade($info, 20%);
+	}
+
+	&.success {
+		background: tint($success, 90%);
+		border-color: tint($success, 50%);
+		color: shade($success, 20%);
+	}
+
+	&.warning {
+		background: tint($warning, 90%);
+		border-color: tint($warning, 50%);
+		color: shade($warning, 20%);
+	}
+
+	&.error {
+		background: tint($error, 90%);
+		border-color: tint($error, 50%);
+		color: shade($error, 10%);
+	}
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,45 @@
+<section id="forms">
+    <h2>Forms</h2>
+
+    <div class="text-field block">
+        <span class="label patternLabel">Text Field</span>
+        <label for="name">Name</label>
+        <input id="name" type="text" name="name">
+    </div>
+
+    <div class="select-field block">
+        <span class="label patternLabel">Select Box</span>
+        <label>Favorite Color</label>
+        <select>
+            <option value="red">Red</option>
+            <option value="orange">Orange</option>
+            <option value="yellow">Yellow</option>
+            <option value="green">Green</option>
+        </select>
+    </div>
+
+    <div class="radio-buttons block">
+        <span class="label patternLabel">Radio Buttons</span>
+        <form>
+            <label>Plan Modeling</label>
+            <div class="form-item">
+                <input type="radio" id="pixel" name="modeling" value="pixel" checked>
+                <label for="pixel">Based on existing pixel</label>
+            </div>
+            <div class="form-item">
+                <input type="radio" id="existing-audience"name="modeling" value="existing-audience">
+                <label for="existing-audience">Based on existing audience</label>
+            </div>
+            <div class="form-item">
+                <input type="radio" id="simple-audience" name="modeling" value="simple-audience">
+                <label for="simple-audience">Based on simple audience</label>
+            </div>
+        </form>
+    </div>
+
+    <div class="textarea block">
+        <span class="label patternLabel">Textarea</span>
+        <label for="message">Message</label>
+        <textarea id="message" name="textarea" rows="5" cols="75" placeholder="Type your message here"></textarea>
+    </div>
+</section>

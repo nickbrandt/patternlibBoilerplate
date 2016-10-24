@@ -1,0 +1,30 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+	background: tint($primaryWhite, 80%);
+	line-height: 1.5;
+}
+
+img {
+	max-width: 100%;
+}
+
+.font-display {
+	font-size: rem-calc(20);
+}
+
+a {
+	color: $primary;
+	text-decoration: none;
+	transition: all .3s;
+
+	&:hover,
+	&.active {
+		color: shade($primary, 10%);
+	}
+}

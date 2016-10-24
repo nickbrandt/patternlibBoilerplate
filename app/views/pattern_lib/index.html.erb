@@ -1,0 +1,52 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Pattern Library</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href="favicon.ico" rel="shortcut icon" type="images/ax-icon">
+
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    </head>
+
+    <body>
+
+        <header>
+            <%= image_tag("logo.png", :alt => "logo") %>
+            <span>Pattern Library</span>
+        </header>
+
+        <main>
+            <div class="container">
+                <aside id="sidebar">
+                    <div class="container">
+                        <nav>
+                            <ul>
+                                <li><a href="#typography" class="active">Typography</a></li>
+                                <li><a href="#colors">Colors</a></li>
+                                <li><a href="#buttons">Buttons</a></li>
+                                <li><a href="#forms">Forms</a></li>
+                                <li><a href="#alerts">Alerts</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </aside>
+
+                <div id="content">
+
+									<%= render 'typography' %>
+									<%= render 'colors' %>
+									<%= render 'buttons' %>
+									<%= render 'forms' %>
+									<%= render 'alerts' %>
+
+								</div>
+						</div>
+				</main>
+		</body>
+</html>
+
