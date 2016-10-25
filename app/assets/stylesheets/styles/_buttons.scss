@@ -1,5 +1,4 @@
-.buttons-lg,
-.buttons-sm {
+.buttons {
 	ul {
 		padding: 0;
 	}
@@ -13,10 +12,6 @@
 			padding-left: 0;
 		}
 	}
-}
-
-.buttons-lg {
-	margin-bottom: rem-calc(20);
 }
 
 // buttons
@@ -100,6 +95,7 @@ button {
 		cursor: default;
 		color: $gray;
 		top: 1px;
+		pointer-events: none;
 
 		&:hover {
 			background: $gray-lt;

@@ -16,7 +16,7 @@
   @return mix(black, $color, $percentage);
 }
 
-
+// Media Queries
 @mixin breakpoint($point) {
   @if $point == small {
     @media (min-width: 24em) { @content; }
@@ -26,5 +26,32 @@
   }
   @else if $point == large {
     @media (min-width: 50em)  { @content; }
+  }
+}
+
+// Icomoon
+@mixin icoMoon($icon, $position: "before", $replace: false) {
+  // If we're replacing the text, set font-size to 0
+  @if $replace {
+    font-size: 0;
+  }
+  // Pseudo-element properties
+  &:#{$position} {
+    @extend .icon-#{$icon};
+    font-family: 'icomoon';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    @if $replace {
+      font-size: 1rem;
+    }
+    @content;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }

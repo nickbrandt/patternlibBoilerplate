@@ -36,6 +36,57 @@ textarea {
 	margin-top: rem-calc(8);
 }
 
+input[type="checkbox"] {
+	width: 0;
+	height: 0;
+	opacity: 0;
+	margin: 0;
+	padding: 0;
+
+	+ label {
+		letter-spacing: 0;
+		display: inline-block;
+		font-weight: 400;
+		font-size: rem-calc(15);
+		position: relative;
+		padding-left: rem-calc(34);
+
+		&:before,
+		&:after {
+			display: block;
+			position: absolute;
+			left: 0;
+			top: 0;
+		}
+
+		&:before {
+			content: '';
+			border: 2px solid $gray;
+			width: 24px;
+			height: 24px;
+		}
+
+		&:after {
+			@extend .icoMoon;
+			@extend .icon-check:before;
+			opacity: 0;
+			left: rem-calc(2);
+			top: rem-calc(2);
+			color: $primary;
+			font-size: rem-calc(19);
+		}
+	}
+
+	&:checked + label {
+		&:before {
+			border-color: $primary;
+		}
+		&:after {
+			opacity: 1;
+		}
+	}
+}
+
 input[type="radio"] {
 	width: 0;
 	height: 0;
@@ -44,7 +95,6 @@ input[type="radio"] {
 	padding: 0;
 
 	+ label {
-		text-transform: none;
 		letter-spacing: 0;
 		display: inline-block;
 		font-size: rem-calc(15);

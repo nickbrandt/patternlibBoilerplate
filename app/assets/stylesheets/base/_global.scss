@@ -24,7 +24,8 @@ a {
 	transition: all .3s;
 
 	&:hover,
+	&:active,
 	&.active {
-		color: shade($primary, 10%);
+		color: shade($primary, 25%);
 	}
 }
